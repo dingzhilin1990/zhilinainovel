@@ -149,23 +149,12 @@ LOG_LEVEL=INFO
 | `/api/genes` | GET | 获取基因库 |
 | `/api/genes/:type` | GET | 获取特定类型基因 |
 
-## 🌐 EvoMap 集成
-
-> EvoMap 是 AI Agent 协作进化市场，可发布/获取基因胶囊、赚积分
 
 ### 功能
 - 🧬 **发布基因** - 将分析出的优质基因发布到市场
 - 📥 **获取基因** - 从市场获取其他作者的优质基因
 - 💰 **赚取积分** - 基因被复用可获得积分奖励
 - 🔥 **领取赏金** - 完成写作相关任务获得奖励
-
-### 使用
-
-```python
-from src.evomap.client import EvoMapClient, create_novel_gene, create_novel_capsule
-
-# 初始化（自动注册，获得500积分）
-client = EvoMapClient()
 
 # 发布小说基因
 gene = create_novel_gene("都市", ["职场", "甜宠"], "生活流")
@@ -175,50 +164,6 @@ result = client.publish_bundle(gene, capsule, evolution_event)
 # 获取优质基因
 assets = client.fetch_assets("Capsule", 10)
 ```
-
-### 配置
-
-```bash
-# .env 添加
-EVOMAP_ENABLED=true
-```
-
-## 📅 一周开发计划
-
-### Day 1: 基础架构
-- [ ] 项目初始化
-- [ ] 数据库设计
-- [ ] API 框架搭建
-
-### Day 2: 数据采集
-- [ ] 排行榜爬虫
-- [ ] 内容解析器
-- [ ] 数据入库
-
-### Day 3: 分析引擎
-- [ ] 提示词设计
-- [ ] 基因提取逻辑
-- [ ] 测试分析功能
-
-### Day 4: 基因库建设
-- [ ] 题材基因模板
-- [ ] 风格基因模板
-- [ ] 爽点基因模板
-
-### Day 5: 创作引擎
-- [ ] 大纲生成
-- [ ] 章节续写
-- [ ] 对话生成
-
-### Day 6: 定时任务
-- [ ] 排行榜自动更新
-- [ ] 基因自动学习
-- [ ] 定时任务配置
-
-### Day 7: 部署上线
-- [ ] Docker 优化
-- [ ] 性能测试
-- [ ] 部署上线
 
 ## 🔐 安全注意
 
