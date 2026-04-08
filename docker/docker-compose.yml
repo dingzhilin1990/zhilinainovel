@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  zhilinainovel:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL:-https://api.minimax.chat/v1}
+      - MODEL=${MODEL:-MiniMax-M2.5}
+      - DATABASE_PATH=/app/data/genes.db
+    volumes:
+      - ../data:/app/data
+    restart: unless-stopped

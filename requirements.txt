@@ -1,0 +1,24 @@
+# Core API
+openai>=1.0.0
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+
+# Web UI
+streamlit>=1.30.0
+
+# Data processing
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+# Database
+sqlalchemy>=2.0.0
+
+# Scheduling
+apscheduler>=3.10.0
+
+# Data validation
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+
+# Optional: for better async performance
+httpx>=0.25.0
