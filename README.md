@@ -1,5 +1,10 @@
 # zhilinainovel
 
+[![GitHub stars](https://img.shields.io/github/stars/dingzhilin1990/zhilinainovel?style=social)](https://github.com/dingzhilin1990/zhilinainovel)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
+
 > AI 小说创作助手 - 智能分析 · 风格克隆 · 自动化创作
 
 **状态：核心功能已就绪（v0.2.0）**
