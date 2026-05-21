@@ -5,15 +5,22 @@ import os
 from openai import OpenAI
 
 # 配置API
+_api_key = os.getenv("OPENAI_API_KEY")
+if not _api_key:
+    raise ValueError(
+        "OPENAI_API_KEY environment variable is not set. "
+        "Please set it in your .env file or export it before running."
+    )
+
 client = OpenAI(
-    api_key=os.getenv("OPENAI_API_KEY"),
+    api_key=_api_key,
     base_url=os.getenv("OPENAI_BASE_URL", "https://api.minimax.chat/v1")
 )
 
 def generate_story(genre: str, prompt: str, max_tokens: int = 1000) -> str:
     """生成小说内容"""
     response = client.chat.completions.create(
-        model="MiniMax-M2.5",
+        model=os.getenv("MODEL", "MiniMax-M2.5"),
         messages=[
             {"role": "system", "content": f"你是一个专业的小说作家，擅长写{genre}题材"},
             {"role": "user", "content": prompt}
