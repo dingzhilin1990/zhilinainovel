@@ -233,7 +233,7 @@ def create_evolution_event(problem: str, solution: str, success: bool) -> Dict:
     return {
         "asset_type": "EvolutionEvent",
         "name": "小说基因创建",
-        "summary": f"创建{gene}基因的过程记录",
+        "summary": f"创建{problem}基因的过程记录",
         "content": {
             "problem": problem,
             "solution": solution,
